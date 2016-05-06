@@ -3,6 +3,7 @@
 (function(){
   angular
   .module("listings", [
+    "ui.router",
     "ngResource"
   ]);
 }());

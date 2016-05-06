@@ -32,7 +32,7 @@
       controllerAs:"listingsNewVm"
     })
     .state("listingsEdit",{
-      url: "listings/edit",
+      url: "listings/:id/edit",
       templateUrl: "js/listings/templates/_edit.html",
       controller: "listingsEditController",
       controllerAs:"listingsEditVm"
