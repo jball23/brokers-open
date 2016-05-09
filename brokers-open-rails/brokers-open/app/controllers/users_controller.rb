@@ -7,7 +7,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    render json: @user
+    user = {
+      profile: @user,
+      listings: @user.listings
+    }
+    render json: user
   end
 
   def create
