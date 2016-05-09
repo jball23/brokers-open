@@ -6,9 +6,9 @@
 
   function NewController(UserFactory, $state){
     var vm = this
-    vm.User = new UserFactory();
+    vm.user = new UserFactory();
     vm.create = function($state){
-      vm.User.$save()
+      vm.user.$save()
     }
   }
 })();
