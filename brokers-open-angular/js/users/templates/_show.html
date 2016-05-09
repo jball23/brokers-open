@@ -2,10 +2,14 @@
 
 <p><a data-ui-sref="usersEdit({id: usersShowVm.user.id})">Edit</a></p>
 
-<p>First name: {{usersShowVm.user.first_name}}</p>
-<p>Last name: {{usersShowVm.user.last_name}}</p>
-<p>Phone: {{usersShowVm.user.phone}}</p>
-<p>Email: {{usersShowVm.user.email}}</p>
-<p>Agency: {{usersShowVm.user.agency}}</p>
+<p>First name: {{usersShowVm.user.profile.first_name}}</p>
+<p>Last name: {{usersShowVm.user.profile.last_name}}</p>
+<p>Phone: {{usersShowVm.user.profile.phone}}</p>
+<p>Email: {{usersShowVm.user.profile.email}}</p>
+<p>Agency: {{usersShowVm.user.profile.agency}}</p>
 
 <p><img data-ng-src="{{usersShowVm.user.avatar}}"></p>
+
+<div data-ng-repeat="listing in usersShowVm.user.listings">
+  <p><a data-ui-sref="listingsShow({id: listing.id})">{{listing.address}}</a></p>
+</div>
