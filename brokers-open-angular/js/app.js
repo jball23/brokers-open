@@ -36,7 +36,7 @@
       url: "listings/:id/edit",
       templateUrl: "js/listings/templates/_edit.html",
       controller: "listingsEditController",
-      controllerAs:"listingsEditVm"
+      controllerAs: "listingsEditVm"
     })
     .state("usersIndex", {
       url: "/users",
@@ -48,7 +48,7 @@
       url: "users/new",
       templateUrl: "js/users/templates/_new.html",
       controller: "usersNewController",
-      controllerAs:"usersNewVm"
+      controllerAs: "usersNewVm"
     })
     .state("usersShow",{
       url: "users/:id",
