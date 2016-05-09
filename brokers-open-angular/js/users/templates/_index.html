@@ -1,0 +1,4 @@
+<h1>Users</h1>
+<div data-ng-repeat="user in usersIndexVm.users">
+  <p><a data-ui-sref="usersShow({id: user.id})">{{user.last_name}}, {{user.first_name}}</a></p>
+</div>

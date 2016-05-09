@@ -1,0 +1,12 @@
+<h1>Edit Page</h1>
+
+<form data-ng-submit="usersEditVm.update()">
+<p><input value="usersShowVm.user.first_name" data-ng-model="usersEditVm.user.first_name" /></p>
+<p><input value="usersShowVm.user.last_name" data-ng-model="usersEditVm.user.last_name" /></p>
+<p><input value="usersShowVm.user.phone" data-ng-model="usersEditVm.user.phone" /></p>
+<p><input value="usersShowVm.user.email" data-ng-model="usersEditVm.user.email" /></p>
+<p><input value="usersShowVm.user.agency" data-ng-model="usersEditVm.user.agency" /></p>
+<p><input value="usersShowVm.user.avatar" data-ng-model="usersEditVm.user.avatar" /></p>
+<input type="submit" value="Update User" />
+<button data-ng-click="usersEditVm.destroy()">Delete</button>
+</form>
