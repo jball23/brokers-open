@@ -11,6 +11,6 @@
   function FactoryFunction($resource){
     return $resource("http://localhost:3000/listings/:id", {}, {
       update: {method: "PUT"}
-    });
+    })
   }
-}());
+})();

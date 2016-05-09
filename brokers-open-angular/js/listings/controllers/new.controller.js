@@ -8,9 +8,7 @@
     var vm = this
     vm.listing = new ListingFactory();
     vm.create = function($state){
-      vm.listing.$save().then(function(res){
-      vm.listing.push(res) 
-      })
+      vm.listing.$save()
     }
   }
 })();

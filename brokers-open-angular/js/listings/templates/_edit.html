@@ -1,1 +1,27 @@
 <h1>Edit Page</h1>
+
+<form data-ng-submit="listingsEditVm.update()">
+<p><input value="listingsShowVm.listing.date" data-ng-model="listingsEditVm.listing.date" /></p>
+<p><input value="listingsShowVm.listing.time_start" data-ng-model="listingsEditVm.listing.time_start" /></p>
+<p><input value="listingsShowVm.listing.time_end" data-ng-model="listingsEditVm.listing.time_end" /></p>
+<p><input value="listingsShowVm.listing.address" data-ng-model="listingsEditVm.listing.address" /></p>
+<p><input value="listingsShowVm.listing.city" data-ng-model="listingsEditVm.listing.city" /></p>
+<p><input value="listingsShowVm.listing.state" data-ng-model="listingsEditVm.listing.state" /></p>
+<p><input value="listingsShowVm.listing.zipcode" data-ng-model="listingsEditVm.listing.zipcode" /></p>
+<p><input value="listingsShowVm.listing.county" data-ng-model="listingsEditVm.listing.county" /></p>
+<p><input value="listingsShowVm.listing.list_price" data-ng-model="listingsEditVm.listing.list_price" /></p>
+<p><input value="listingsShowVm.listing.property_status" data-ng-model="listingsEditVm.listing.property_status" /></p>
+<p><input value="listingsShowVm.listing.property_type" data-ng-model="listingsEditVm.listing.property_type" /></p>
+<p><input value="listingsShowVm.listing.mls_num" data-ng-model="listingsEditVm.listing.mls_num" /></p>
+<p><input value="listingsShowVm.listing.bedrooms_num" data-ng-model="listingsEditVm.listing.bedrooms_num" /></p>
+<p><input value="listingsShowVm.listing.full_baths" data-ng-model="listingsEditVm.listing.full_baths" /></p>
+<p><input value="listingsShowVm.listing.half_baths" data-ng-model="listingsEditVm.listing.half_baths" /></p>
+<p><input value="listingsShowVm.listing.sponsors" data-ng-model="listingsEditVm.listing.sponsors" /></p>
+<p><input value="listingsShowVm.listing.property_description" data-ng-model="listingsEditVm.listing.property_description" /></p>
+<p><input value="listingsShowVm.listing.food_offered" data-ng-model="listingsEditVm.listing.food_offered" /></p>
+<p><input value="listingsShowVm.listing.food_description" data-ng-model="listingsEditVm.listing.food_description" /></p>
+<p><input value="listingsShowVm.listing.incentive" data-ng-model="listingsEditVm.listing.incentive" /></p>
+<p><input value="listingsShowVm.listing.property_image" data-ng-model="listingsEditVm.listing.property_image"></p>
+<input type="submit" value="Update Listing" />
+<button data-ng-click="listingsEditVm.destroy()">Delete</button>
+</form>
