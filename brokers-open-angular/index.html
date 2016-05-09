@@ -8,16 +8,24 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/listings/app.js"></script>
+  <script src="js/listings/listings.js"></script>
+  <script src="js/users/users.js"></script>
   <script src="js/listings/controllers/listing.factory.js"></script>
   <script src="js/listings/controllers/edit.controller.js"></script>
   <script src="js/listings/controllers/new.controller.js"></script>
   <script src="js/listings/controllers/show.controller.js"></script>
   <script src="js/listings/controllers/index.controller.js"></script>
+  <script src="js/users/controllers/user.factory.js"></script>
+  <script src="js/users/controllers/index.controller.js"></script>
+  <script src="js/users/controllers/show.controller.js"></script>
+  <script src="js/users/controllers/edit.controller.js"></script>
+  <script src="js/users/controllers/new.controller.js"></script>
 </head>
 <body data-ng-app="brokers_open">
   <a data-ui-sref="listingsIndex">Listings</a>
-  <a data-ui-sref="listingsNew">New</a>
+  <a data-ui-sref="listingsNew">New Listing</a>
+  <a data-ui-sref="usersIndex">All Users</a>
+  <a data-ui-sref="usersNew">New User</a>
 <main data-ui-view></main>
 </body>
 </html>
