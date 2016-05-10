@@ -1,5 +1,10 @@
-<h1>Listings</h1>
+<h1 ng-init="listingsIndexVm.hello()">Listings</h1>
 <div data-ng-repeat="listing in listingsIndexVm.listings">
   <p><a data-ui-sref="listingsShow({id: listing.id})">{{listing.address}}</a></p>
 </div>
 <main data-ui-view></main>
+
+<div data-ui-gmap-google-map
+    center='listingsIndexVm.map.center'
+    zoom='listingsIndexVm.map.zoom'>
+</div>
