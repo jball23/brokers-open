@@ -11,12 +11,15 @@
     this.listings = ListingFactory.query();
 
     this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-    this.hello = function() {
-      console.log("hello");
-    }
+
+    var map;
+    var initMap = function() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
 
   }
-
-
 
 })();
