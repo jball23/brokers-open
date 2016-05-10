@@ -14,6 +14,10 @@
 
   function RouterFunction($stateProvider){
   $stateProvider
+    .state("Index",{
+      url: "/",
+      templateUrl:"js/_index.html"
+    })
     .state("listingsIndex", {
     url: "/listings",
     templateUrl: "js/listings/templates/_index.html",

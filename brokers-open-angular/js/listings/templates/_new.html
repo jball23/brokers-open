@@ -11,7 +11,22 @@
 <p><input placeholder="Zip Code" data-ng-model="listingsNewVm.listing.zipcode" /></p>
 <p><input placeholder="County" data-ng-model="listingsNewVm.listing.county" /></p>
 <p><input placeholder="Price" data-ng-model="listingsNewVm.listing.list_price" /></p>
-<p><input placeholder="Property Status" data-ng-model="listingsNewVm.listing.property_status" /></p>
+
+<p>
+  <select name="Property Status">
+    <option selected>Property Status</option>
+    <option value="Active" data-ng-model="listingsNewVm.listing.property_status">Active</option>
+    <option value="Coming Soon" data-ng-model="listingsNewVm.listing.property_status">Coming Soon</option>
+  </select>
+</p>
+
+<p>
+  <select name="Property Type">
+    <option selected>Property Type</option>
+    <option value="Active" data-ng-model="listingsNewVm.listing.property_type">Active</option>
+    <option value="Coming Soon" data-ng-model="listingsNewVm.listing.property_type">Coming Soon</option>
+  </select>
+</p>
 <p><input placeholder="Property Type" data-ng-model="listingsNewVm.listing.property_type" /></p>
 <p><input placeholder="MLS Number" data-ng-model="listingsNewVm.listing.mls_num" /></p>
 <p><input type="number" placeholder="Number of Bedrooms" data-ng-model="listingsNewVm.listing.bedrooms_num" min="0"/></p>
