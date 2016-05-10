@@ -34,12 +34,22 @@
   <script src="js/users/controllers/show.controller.js"></script>
   <script src="js/users/controllers/edit.controller.js"></script>
   <script src="js/users/controllers/new.controller.js"></script>
+  <script>function myFunction() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+}</script>
 </head>
 <body data-ng-app="brokers_open">
-  <a data-ui-sref="listingsIndex">Listings</a>
-  <a data-ui-sref="listingsNew">New Listing</a>
-  <a data-ui-sref="usersIndex">All Users</a>
-  <a data-ui-sref="usersNew">New User</a>
+<ul class="topnav">
+  <li><a data-ui-sref="Index">MY BROKERS OPEN</li>
+  <li><a data-ui-sref="listingsIndex">Search Opens</a></li>
+  <li><a data-ui-sref="listingsNew">Add Open</a></li>
+  <li><a data-ui-sref="usersIndex">All Agents</a></li>
+  <li><a data-ui-sref="usersNew">Add Agent</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);"
+    onclick="myFunction()" style="font-size:15px">☰</a>
+  </li>
+</ul>
 <main data-ui-view></main>
 <div id="map"></div>
 </body>

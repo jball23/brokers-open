@@ -2,9 +2,9 @@
 
 <p><a data-ui-sref="listingsEdit({id: listingsShowVm.listing.id})">Edit</a></p>
 
-<p>Date {{listingsShowVm.listing.date}}</p>
-<p>Time Start {{listingsShowVm.listing.time_start}}</p>
-<p>Time End {{listingsShowVm.listing.time_end}}</p>
+<p>Date {{listingsShowVm.listing.date | date: "longDate"}}</p>
+<p>Time Start {{listingsShowVm.listing.time_start | date: "hh:mm a"}}</p>
+<p>Time End {{listingsShowVm.listing.time_end | date: "hh:mm a"}}</p>
 <p>Address {{listingsShowVm.listing.address}}</p>
 <p>City {{listingsShowVm.listing.city}}</p>
 <p>State {{listingsShowVm.listing.state}}</p>

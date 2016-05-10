@@ -1,24 +1,44 @@
 <h1>New Page</h1>
 <form data-ng-submit="listingsNewVm.create()">
-<p><input placeholder="Date" data-ng-model="listingsNewVm.listing.date" /></p>
-<p><input placeholder="Start Time" data-ng-model="listingsNewVm.listing.time_start" /></p>
-<p><input placeholder="End Time" data-ng-model="listingsNewVm.listing.time_end" /></p>
+<label class="control-label" for="date">Date:</label>
+<input type="date" name="input" data-ng-model="listingsNewVm.listing.date"
+     placeholder="yyyy-MM-dd" min="2016-01-01" max="2016-12-31" required />
+<p><input type="time" placeholder="Start Time" data-ng-model="listingsNewVm.listing.time_start" /></p>
+<p><input type="time" placeholder="End Time" data-ng-model="listingsNewVm.listing.time_end" /></p>
 <p><input placeholder="Address" data-ng-model="listingsNewVm.listing.address" /></p>
 <p><input placeholder="City" data-ng-model="listingsNewVm.listing.city" /></p>
 <p><input placeholder="State" data-ng-model="listingsNewVm.listing.state" /></p>
 <p><input placeholder="Zip Code" data-ng-model="listingsNewVm.listing.zipcode" /></p>
 <p><input placeholder="County" data-ng-model="listingsNewVm.listing.county" /></p>
 <p><input placeholder="Price" data-ng-model="listingsNewVm.listing.list_price" /></p>
-<p><input placeholder="Property Status" data-ng-model="listingsNewVm.listing.property_status" /></p>
+
+<p>
+  <select name="Property Status">
+    <option selected>Property Status</option>
+    <option value="Active" data-ng-model="listingsNewVm.listing.property_status">Active</option>
+    <option value="Coming Soon" data-ng-model="listingsNewVm.listing.property_status">Coming Soon</option>
+  </select>
+</p>
+
+<p>
+  <select name="Property Type">
+    <option selected>Property Type</option>
+    <option value="Active" data-ng-model="listingsNewVm.listing.property_type">Active</option>
+    <option value="Coming Soon" data-ng-model="listingsNewVm.listing.property_type">Coming Soon</option>
+  </select>
+</p>
 <p><input placeholder="Property Type" data-ng-model="listingsNewVm.listing.property_type" /></p>
 <p><input placeholder="MLS Number" data-ng-model="listingsNewVm.listing.mls_num" /></p>
-<p><input placeholder="Number of Bedrooms" data-ng-model="listingsNewVm.listing.bedrooms_num" /></p>
-<p><input placeholder="Number of Full Bathrooms" data-ng-model="listingsNewVm.listing.full_baths" /></p>
-<p><input placeholder="Number of Half Bathrooms" data-ng-model="listingsNewVm.listing.half_baths" /></p>
+<p><input type="number" placeholder="Number of Bedrooms" data-ng-model="listingsNewVm.listing.bedrooms_num" min="0"/></p>
+<p><input type="number" placeholder="Number of Full Bathrooms" data-ng-model="listingsNewVm.listing.full_baths" min="0"/></p>
+<p><input type="number" placeholder="Number of Half Bathrooms" data-ng-model="listingsNewVm.listing.half_baths" min="0"/></p>
 <p><input placeholder="Sponsors" data-ng-model="listingsNewVm.listing.sponsors" /></p>
 <p><input placeholder="Property Description" data-ng-model="listingsNewVm.listing.property_description" /></p>
-<p><input placeholder="Food Offered" data-ng-model="listingsNewVm.listing.food_offered" /></p>
-<p><input placeholder="Food Description" data-ng-model="listingsNewVm.listing.food_description" /></p>
+<p>Food Offered:
+  <input type="radio" value="true" data-ng-model="listingsNewVm.listing.food_offered">Yes
+  <input type="radio" value="false" data-ng-model="listingsNewVm.listing.food_offered" />No
+</p>
+<p><textarea placeholder="Description of food (if applicable)" data-ng-model="listingsNewVm.listing.food_description"> </textarea></p>
 <p><input placeholder="Incentive" data-ng-model="listingsNewVm.listing.incentive" /></p>
 <p><input placeholder="Image URL" data-ng-model="listingsNewVm.listing.property_image"></p>
 <input type="submit" value="Add Listing" />
