@@ -8,7 +8,7 @@
 <p>Email: {{usersShowVm.user.profile.email}}</p>
 <p>Agency: {{usersShowVm.user.profile.agency}}</p>
 
-<p><img data-ng-src="{{usersShowVm.user.avatar}}"></p>
+<p><img data-ng-src="{{usersShowVm.user.profile.avatar}}"></p>
 
 <div data-ng-repeat="listing in usersShowVm.user.listings">
   <p><a data-ui-sref="listingsShow({id: listing.id})">{{listing.address}}</a></p>
