@@ -1,9 +1,25 @@
 <h1 ng-init="listingsIndexVm.initMap()">Listings</h1>
 <input type="text" class="form-control" placeholder="Filter on..." data-ng-model="listingsIndexVm.filter_on" />
-<div data-ng-repeat="listing in listingsIndexVm.listings | filter: listingsIndexVm.filter_on" >
-  <p><a data-ui-sref="listingsShow({id: listing.id})">{{listing.address}}</a></p>
-</div>
-<main data-ui-view></main>
+<table >
+<thead>
+    <tr>
+      <td data-ng-click="listingsIndexVm.is_descending = !(listingsIndexVm.is_descending)">
+      </td>
+      <th>Address</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('list_price')">Cost</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('bedrooms_num')">No. of Beds</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="listing in listingsIndexVm.listings | filter: listingsIndexVm.filter_on | orderBy: listingsIndexVm.sort_on : listingsIndexVm.is_descending">
+    <td>{{$index + 1}}</td>
+    <td><a data-ui-sref="listingsShow({id: listing.id})">{{listing.address}}</a></td>
+    <td>{{listing.list_price | currency}}</td>
+    <td>{{listing.bedrooms_num}}</td>
+
+  </tr>
+  </tbody>
+</table>
 
 <div data-ui-gmap-google-map
     center='listingsIndexVm.map.center'

@@ -10,6 +10,11 @@
   function IndexController(ListingFactory){
     this.listings = ListingFactory.query();
 
+    this.sort_data_by = function(name){
+     this.sort_on = name;
+     this.is_descending = !(this.is_descending);
+   }
+
     this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
     var map;
