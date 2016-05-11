@@ -69,3 +69,20 @@ ul.topnav li.icon {display: none;}
   }
 
 }
+
+img.mini_me{
+  max-width:10vw;
+}
+table{
+  margin-top:1vw;
+}
+td, th{
+  padding:10px;
+  border: 1px outset #f6f6f6;
+  background-color: #fff;
+}
+.search_opens{
+  font-size: 1.25em;
+  padding:0.5em;
+  margin-top:1vw;
+}

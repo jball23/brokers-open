@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <h1>Listings</h1>
 
@@ -9,3 +10,40 @@
 <main data-ui-view></main>
 
 <div data-ng-init="listingsIndexVm.initMap()" id="map"></div>
+=======
+<div ng-init="listingsIndexVm.initMap()"></div>
+<div data-ui-gmap-google-map
+    center='listingsIndexVm.map.center'
+    zoom='listingsIndexVm.map.zoom'>
+</div>
+<input type="text" class="search_opens" placeholder="Search Opens" data-ng-model="listingsIndexVm.filter_on" />
+<table >
+<thead>
+    <tr>
+      <th>Preview</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('property_status')">Property Status</th>
+      <th>Address</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('city')">City</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('state')">State</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('list_price')">Price</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('bedrooms_num')">No. of Beds</th>
+      <th data-ng-click="listingsIndexVm.sort_data_by('full_baths')">No. of Baths</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-ng-repeat="listing in listingsIndexVm.listings | filter: listingsIndexVm.filter_on | orderBy: listingsIndexVm.sort_on : listingsIndexVm.is_descending">
+    <td><img class="mini_me" data-ng-src="{{listing.property_image}}">
+    <td>{{listing.property_status}}</td>
+    <td>{{listing.address}}</td>
+    <td>{{listing.city}}</td>
+    <td>{{listing.state}}</td>
+    <td>{{listing.list_price | currency:$:0}}</td>
+    <td>{{listing.bedrooms_num}}</td>
+    <td>{{listing.full_baths}}</td>
+    <td><a data-ui-sref="listingsShow({id: listing.id})">More Info</a></td>
+
+  </tr>
+  </tbody>
+</table>
+>>>>>>> 3ef4b164243cecbcd902e2714a23e621b5bf0538

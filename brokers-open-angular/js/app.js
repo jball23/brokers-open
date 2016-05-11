@@ -39,7 +39,7 @@
   $stateProvider
     .state("Index",{
       url: "/",
-      templateUrl:"js/_index.html"
+      templateUrl:"js/templates/_index.html"
     })
     .state("listingsIndex", {
     url: "/listings",

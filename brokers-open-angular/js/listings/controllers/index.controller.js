@@ -16,6 +16,7 @@
       var baseUrl = 'http://maps.googleapis.com/maps/api/geocode/json?address='
       addresses.forEach(function(address){
 
+
         $http({
           method: 'GET',
           url: baseUrl + address + "&sensor=false"
@@ -28,6 +29,14 @@
         })
       })
     })
+
+    this.sort_data_by = function(name){
+     this.sort_on = name;
+     this.is_descending = !(this.is_descending);
+   }
+
+    this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+
 
 
     var initialLocation;
@@ -72,5 +81,5 @@
       }
 
     }
-    
+
 })();
