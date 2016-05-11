@@ -7,6 +7,7 @@
 <thead>
     <tr>
       <th>Preview</th>
+      <th>Action</th>
       <th data-ng-click="listingsIndexVm.sort_data_by('property_status')">Property Status</th>
       <th>Address</th>
       <th data-ng-click="listingsIndexVm.sort_data_by('city')">City</th>
@@ -14,12 +15,15 @@
       <th data-ng-click="listingsIndexVm.sort_data_by('list_price')">Price</th>
       <th data-ng-click="listingsIndexVm.sort_data_by('bedrooms_num')">No. of Beds</th>
       <th data-ng-click="listingsIndexVm.sort_data_by('full_baths')">No. of Baths</th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr data-ng-repeat="listing in listingsIndexVm.listings | filter: listingsIndexVm.filter_on | orderBy: listingsIndexVm.sort_on : listingsIndexVm.is_descending">
-    <td><img class="mini_me" data-ng-src="{{listing.property_image}}">
+    <td><a data-ui-sref="listingsShow({id: listing.id})"><img class="mini_me" data-ng-src="{{listing.property_image}}"/></a></td>
+    <td>
+      <a class="table_links" data-ui-sref="listingsShow({id: listing.id})">More Info</a>
+      <a class="table_links" data-ui-sref="listingsEdit({id: listing.id})">Edit</a>
+    </td>
     <td>{{listing.property_status}}</td>
     <td>{{listing.address}}</td>
     <td>{{listing.city}}</td>
@@ -27,7 +31,6 @@
     <td>{{listing.list_price | currency:$:0}}</td>
     <td>{{listing.bedrooms_num}}</td>
     <td>{{listing.full_baths}}</td>
-    <td><a data-ui-sref="listingsShow({id: listing.id})">More Info</a></td>
 
   </tr>
   </tbody>
