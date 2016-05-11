@@ -6,19 +6,34 @@
     "ui.router",
     "listings",
     "users",
-    "uiGmapgoogle-maps"
   ])
   .config([
     "$stateProvider",
     RouterFunction
   ])
-  .config(function(uiGmapGoogleMapApiProvider) {
-    uiGmapGoogleMapApiProvider.configure({
-        key: 'AIzaSyDiwUcO3CqlWQu-1uX2dchq0pxpM5i1khQ',
-        v: '3.20', //defaults to latest 3.X anyhow
-        libraries: 'places,weather,geometry,visualization'
-    });
-})
+  // .directive("myMaps", function(){
+  //   return{
+  //     restrict: 'E',
+  //     template: '<div></div>',
+  //     replace: true,
+  //     link: function initMap(scope, element, attrs){
+  //       var myLatLng = new google.maps.LatLng(28.070011,83.24939);
+  //       var mapOptions = {
+  //         center: myLatLng,
+  //         zoom: 16,
+  //         mapTypeId: google.maps.MapTypeId.ROADMAP
+  //       };
+  //       var map = new google.maps.Map(document.getElementById('attrs.id'),
+  //         mapOptions);
+  //       var marker = new google.maps.Marker({
+  //         position: myLatLng,
+  //         map: map,
+  //         title: "My Brokers Open"
+  //       });
+  //       marker.setMap(map);
+  //     }
+  //   }
+  // })
 
   function RouterFunction($stateProvider){
   $stateProvider
