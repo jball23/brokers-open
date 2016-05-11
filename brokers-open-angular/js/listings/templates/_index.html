@@ -1,21 +1,7 @@
 
-
-<h1>Listings</h1>
-
-
-
-<div data-ng-repeat="listing in listingsIndexVm.listings">
-  <p><a data-ui-sref="listingsShow({id: listing.id})">{{listing.address}}</a></p>
-</div>
-<main data-ui-view></main>
-
 <div data-ng-init="listingsIndexVm.initMap()" id="map"></div>
 
-<div ng-init="listingsIndexVm.initMap()"></div>
-<div data-ui-gmap-google-map
-    center='listingsIndexVm.map.center'
-    zoom='listingsIndexVm.map.zoom'>
-</div>
+
 <input type="text" class="search_opens" placeholder="Search Opens" data-ng-model="listingsIndexVm.filter_on" />
 <table >
 <thead>
