@@ -8,18 +8,24 @@
   ])
 
   function IndexController(ListingFactory){
+
     this.listings = ListingFactory.query();
 
-    this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
-
     var map;
+    var myLatLng = new google.maps.LatLng(28.070011,83.24939);
     this.initMap = function() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: myLatLng,
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
         });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: "My Brokers Open"
+        })
       }
-
   }
+
 
 })();

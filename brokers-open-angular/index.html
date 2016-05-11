@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ng-app="brokers_open">
 <head>
   <meta charset="UTF-8">
   <title>My Brokers Open</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiwUcO3CqlWQu-1uX2dchq0pxpM5i1khQ&callback=initMap"
-  async defer></script>
-  <script src="lodash.js"></script>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiwUcO3CqlWQu-1uX2dchq0pxpM5i1khQ&">
+  </script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
-  <script src="angular-simple-logger.js"></script>
-  <script src="angular-google-maps.min.js"></script>
+
   <script src="js/app.js"></script>
   <script src="js/listings/listings.js"></script>
   <script src="js/users/users.js"></script>
@@ -29,7 +29,7 @@
     document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
 }</script>
 </head>
-<body data-ng-app="brokers_open">
+<body>
 <ul class="topnav">
   <li><a data-ui-sref="Index">MY BROKERS OPEN</li>
   <li><a data-ui-sref="listingsIndex">Search Opens</a></li>
@@ -42,6 +42,6 @@
   </li>
 </ul>
 <main data-ui-view></main>
-<!-- <div id="map"></div> -->
+
 </body>
 </html>
