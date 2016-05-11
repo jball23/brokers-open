@@ -73,3 +73,11 @@ ul.topnav li.icon {display: none;}
   }
 
 }
+
+img.mini_me{
+  max-width:10vw;
+}
+td, th{
+  padding:10px;
+  
+}
