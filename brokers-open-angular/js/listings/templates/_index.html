@@ -1,5 +1,6 @@
 <h1 ng-init="listingsIndexVm.initMap()">Listings</h1>
-<div data-ng-repeat="listing in listingsIndexVm.listings">
+<input type="text" class="form-control" placeholder="Filter on..." data-ng-model="listingsIndexVm.filter_on" />
+<div data-ng-repeat="listing in listingsIndexVm.listings | filter: listingsIndexVm.filter_on" >
   <p><a data-ui-sref="listingsShow({id: listing.id})">{{listing.address}}</a></p>
 </div>
 <main data-ui-view></main>

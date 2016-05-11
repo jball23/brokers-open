@@ -1,4 +1,5 @@
 <h1>Users</h1>
-<div data-ng-repeat="user in usersIndexVm.users">
+<input type="text" class="form-control" placeholder="Filter on..." data-ng-model="usersIndexVm.filter_on" />
+<div data-ng-repeat="user in usersIndexVm.users | filter: usersIndexVm.filter_on">
   <p><a data-ui-sref="usersShow({id: user.id})">{{user.last_name}}, {{user.first_name}}</a></p>
 </div>
