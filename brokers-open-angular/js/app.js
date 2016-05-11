@@ -16,7 +16,7 @@
     uiGmapGoogleMapApiProvider.configure({
         key: 'AIzaSyDiwUcO3CqlWQu-1uX2dchq0pxpM5i1khQ',
         v: '3.20', //defaults to latest 3.X anyhow
-        libraries: 'weather,geometry,visualization'
+        libraries: 'places,weather,geometry,visualization'
     });
 })
 
