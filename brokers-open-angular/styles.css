@@ -86,3 +86,8 @@ td, th{
   padding:0.5em;
   margin-top:1vw;
 }
+.table_links, .table_links:visited{
+  display:block;
+  padding:3px;
+  color:blue;
+}
