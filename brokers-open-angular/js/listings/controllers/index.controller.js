@@ -48,7 +48,7 @@
 
     var initialLocation;
     var siberia = new google.maps.LatLng(60, 105);
-    var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+    var washingtonDc = new google.maps.LatLng(38.889931, -77.009003);
     var browserSupportFlag =  new Boolean();
     var map;
     this.initMap = function() {
@@ -78,7 +78,7 @@
         function handleNoGeolocation(errorFlag) {
           if (errorFlag == true) {
             alert("Geolocation service failed.");
-            initialLocation = newyork;
+            initialLocation = washingtonDc;
           } else {
             alert("Your browser doesn't support geolocation. We've placed you in Siberia.");
             initialLocation = siberia;
