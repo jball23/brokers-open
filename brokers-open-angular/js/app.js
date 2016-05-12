@@ -13,6 +13,7 @@
   ])
   .filter('boolText', boolText)
 
+
   function RouterFunction($stateProvider){
     $stateProvider
     .state("Index",{
