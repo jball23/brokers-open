@@ -1,5 +1,21 @@
-<h1>Users</h1>
-<input type="text" class="form-control" placeholder="Filter on..." data-ng-model="usersIndexVm.filter_on" />
-<div data-ng-repeat="user in usersIndexVm.users | filter: usersIndexVm.filter_on">
-  <p><a data-ui-sref="usersShow({id: user.id})">{{user.last_name}}, {{user.first_name}}</a></p>
-</div>
+<input type="text" class="search_opens" placeholder="Find an agent" data-ng-model="usersIndexVm.filter_on" />
+<table>
+  <thead>
+    <tr>
+      <th>Fantasy</th>
+      <th data-ng-click="usersIndexVm.sort_data_by('last_name')">Name</th>
+      <th>Agency</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+<tr data-ng-repeat="user in usersIndexVm.users | filter: usersIndexVm.filter_on | orderBy: usersIndexVm.sort_on : usersIndexVm.is_descending">
+  <td><img class="mini_me" data-ng-src="{{user.avatar}}" data-ui-sref="usersShow({id: user.id})"></td>
+  <td><a data-ui-sref="usersShow({id: user.id})">{{user.last_name}}, {{user.first_name}}</a></td>
+  <td>{{user.agency}}</td>
+  <td>{{user.phone}}</td>
+  <td>{{user.email}}</td>
+  <td><a data-ui-sref="usersEdit({id: user.id})">Edit</a></td>
+</tr>
+</table>
