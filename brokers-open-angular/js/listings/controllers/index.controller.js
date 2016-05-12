@@ -13,18 +13,27 @@
       response.forEach(function(listing){
         addresses.push(listing.address + " " + listing.city + " " + listing.state + " " + listing.zipcode)
       })
+
       var baseUrl = 'http://maps.googleapis.com/maps/api/geocode/json?address='
       addresses.forEach(function(address){
-
-
         $http({
           method: 'GET',
           url: baseUrl + address + "&sensor=false"
         }).then(function(response){
           var latlng = new google.maps.LatLng(response.data.results[0].geometry.location.lat, response.data.results[0].geometry.location.lng);
+          console.log(response)
           var marker = new google.maps.Marker({
             position: latlng,
             map: map
+          })
+
+          var contentString = '<div></div>';
+
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
           })
         })
       })
