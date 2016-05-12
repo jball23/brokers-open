@@ -21,17 +21,15 @@
           url: baseUrl + address + "&sensor=false"
         }).then(function(response){
           var latlng = new google.maps.LatLng(response.data.results[0].geometry.location.lat, response.data.results[0].geometry.location.lng);
-          console.log(response)
+          var markerInfo = response.data.results[0].formatted_address
+          var contentString = '<div>'+ markerInfo +'</div>';
+          var infowindow = new google.maps.InfoWindow({
+            content: contentString
+          });
           var marker = new google.maps.Marker({
             position: latlng,
             map: map
           })
-
-          var contentString = '<div></div>';
-
-          var infowindow = new google.maps.InfoWindow({
-            content: contentString
-          });
           marker.addListener('click', function() {
             infowindow.open(map, marker);
           })
