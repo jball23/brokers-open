@@ -1,25 +1,32 @@
-<h1>Show Page</h1>
+<div class="row">
+  <div class="column">
+    <p class="status">{{listingsShowVm.listing.property_status}}</p>
+    <p class="listing_description">{{listingsShowVm.listing.property_description}}</p>
+    <img class="listings_show" data-ng-src="{{listingsShowVm.listing.property_image}}">
+    <p class="MLS">MLS Number: {{listingsShowVm.listing.mls_num}} (<a data-ui-sref="listingsEdit({id: listingsShowVm.listing.id})">Edit Open</a>)</p>
+  </div>
 
-<p><a data-ui-sref="listingsEdit({id: listingsShowVm.listing.id})">Edit</a></p>
+  <div class="column">
+    <p class="list_price">{{listingsShowVm.listing.list_price | currency:$:0}}</p>
+    <p class="address">{{listingsShowVm.listing.address}}<br>
+      {{listingsShowVm.listing.city}}, {{listingsShowVm.listing.state}} {{listingsShowVm.listing.zipcode}}</p>
 
-<p>Date {{listingsShowVm.listing.date | date: "longDate"}}</p>
-<p>Time Start {{listingsShowVm.listing.time_start | date: "hh:mm a"}}</p>
-<p>Time End {{listingsShowVm.listing.time_end | date: "hh:mm a"}}</p>
-<p>Address {{listingsShowVm.listing.address}}</p>
-<p>City {{listingsShowVm.listing.city}}</p>
-<p>State {{listingsShowVm.listing.state}}</p>
-<p>Zip Code{{listingsShowVm.listing.zipcode}}</p>
-<p>County {{listingsShowVm.listing.county}}</p>
-<p>List Price {{listingsShowVm.listing.list_price | currency}}</p>
-<p>Property Status {{listingsShowVm.listing.property_status}}</p>
-<p>Property Type {{listingsShowVm.listing.property_type}}</p>
-<p>MLS Number {{listingsShowVm.listing.mls_num}}</p>
-<p>Number Bedrooms {{listingsShowVm.listing.bedrooms_num}}</p>
-<p>Number Full Bathrooms {{listingsShowVm.listing.full_baths}}</p>
-<p>Number Half Bathrooms {{listingsShowVm.listing.half_baths}}</p>
-<p>Sponsors {{listingsShowVm.listing.sponsors}}</p>
-<p>Property Description {{listingsShowVm.listing.property_description}}</p>
-<p>Food Offered {{listingsShowVm.listing.food_offered}}</p>
-<p>Food Description {{listingsShowVm.listing.food_description}}</p>
-<p>Listing Incentive {{listingsShowVm.listing.incentive}}</p>
-<p><img data-ng-src="{{listingsShowVm.listing.property_image}}"></p>
+    <p>{{listingsShowVm.listing.property_type}}</p>
+    <p>{{listingsShowVm.listing.bedrooms_num}} Bedrooms</p>
+    <p>{{listingsShowVm.listing.full_baths}} Full Bathrooms</p>
+    <p>{{listingsShowVm.listing.half_baths}} Half Bathrooms</p>
+  </div>
+
+  <div class="column">
+    <div class="open_details">
+      <p class="event_details">Event Details:</p>
+      <p>Date: {{listingsShowVm.listing.date | date: "longDate"}}</p>
+      <p>From {{listingsShowVm.listing.time_start | date: "hh:mm a"}} - {{listingsShowVm.listing.time_end | date: "hh:mm a"}}</p>
+      <p>Sponsored by {{listingsShowVm.listing.sponsors}}</p>
+      <p>{{listingsShowVm.listing.incentive}}</p>
+      <p>Food Offered? {{listingsShowVm.listing.food_offered | boolText}}</p>
+      <p>{{listingsShowVm.listing.food_description}}</p>
+    </div>
+  </div>
+
+</div>

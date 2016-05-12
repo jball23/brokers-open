@@ -14,6 +14,7 @@ body {
   font-family: helvetica, sans-serif;
   padding: 0;
   height: 100%;
+  width:100vw;
 }
 
 main {
@@ -86,8 +87,68 @@ td, th{
   padding:0.5em;
   margin-top:1vw;
 }
-.table_links, .table_links:visited{
+td a, a:visited{
   display:block;
   padding:3px;
-  color:blue;
+  color:grey;
+}
+.row{
+  display:flex;
+}
+div.column{
+  display:inline;
+  position:relative;
+  box-sizing: border-box;
+  width: 33.33%;
+  padding:2%;
+}
+
+.listings_show{
+  max-width:100%
+}
+
+.form{
+  display:flex;
+  margin-left:12vw;
+}
+.status{
+  font-size: 2em;
+  color: red;
+  padding:0;
+  margin:0;
+}
+.listing_description{
+  font-style: italic;
+}
+.list_price{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.MLS{
+  font-size: 0.8em;
+  font-style: italic;
+}
+.address{
+  border-radius: 10px;
+  border: 2px outset #eee;
+  padding: 1.5em;
+  width:60%;
+  font-weight: bold;
+}
+.open_details{
+  margin-top: 2em;
+  border: 2px outset #eee;
+  border-radius: 10px;
+  padding:1em;
+  width:70%;
+}
+.event_details{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.agent_name, .listings{
+  font-size: 2em;
+}
+main a, a:visited{
+  color:grey;
 }
