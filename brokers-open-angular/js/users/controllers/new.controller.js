@@ -7,7 +7,7 @@
   function NewController(UserFactory, $state){
     var vm = this
     vm.user = new UserFactory();
-    vm.create = function($state){
+    vm.create = function(){
       vm.user.$save().then(function(){
         $state.go('usersIndex')
       });
