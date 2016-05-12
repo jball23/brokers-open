@@ -1,7 +1,7 @@
 <h1>Edit Open</h1>
+<form data-ng-submit="listingsEditVm.update()">
 <div class="row">
     <div class="column">
-      <form data-ng-submit="listingsEditVm.update()">
       <p>Date: <input value="listingsShowVm.listing.date" data-ng-model="listingsEditVm.listing.date" /></p>
       <p>Start Time: <input value="listingsShowVm.listing.time_start" data-ng-model="listingsEditVm.listing.time_start" /></p>
       <p>End Time: <input value="listingsShowVm.listing.time_end" data-ng-model="listingsEditVm.listing.time_end" /></p>
@@ -27,10 +27,10 @@
       <p>Image URL: <input value="listingsShowVm.listing.property_image" data-ng-model="listingsEditVm.listing.property_image"></p>
       <input type="submit" value="Update Open" />
       <button data-ng-click="listingsEditVm.destroy()">Delete</button>
-      </form>
     </div>
     <div class="column">
       <p style="font-size:5em; margin-top:0">¯\_(ツ)_/¯</p>
       <img style="max-width:100%" src="http://www.whitperson.com/wp-content/uploads/2013/03/anigif_enhanced-buzz-659-1342456499-13.gif">
     </div>
 </div>
+</form>
