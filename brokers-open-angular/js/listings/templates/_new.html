@@ -1,103 +1,109 @@
-<h1>New Page</h1>
-<form data-ng-submit="listingsNewVm.create()">
-<label class="control-label" for="date">Date:</label>
-<input type="date" name="input" data-ng-model="listingsNewVm.listing.date"
-     placeholder="yyyy-MM-dd" min="2016-01-01" max="2016-12-31" required />
-<p><input type="time" placeholder="Start Time" data-ng-model="listingsNewVm.listing.time_start" /></p>
-<p><input type="time" placeholder="End Time" data-ng-model="listingsNewVm.listing.time_end" /></p>
-<p><input placeholder="Address" data-ng-model="listingsNewVm.listing.address" /></p>
-<p><input placeholder="City" data-ng-model="listingsNewVm.listing.city" /></p>
-<p>
-  <select name="State">
-    <option selected>Select State</option>
-    <option value="Alabama" data-ng-model="listingsNewVm.listing.state">AL | Alabama</option>
-    <option value="Alaska" data-ng-model="listingsNewVm.listing.state">AK | Alaska</option>
-    <option value="Arizona" data-ng-model="listingsNewVm.listing.state">AZ | Arizona</option>
-    <option value="California" data-ng-model="listingsNewVm.listing.state">CA | California</option>
-    <option value="Colorado" data-ng-model="listingsNewVm.listing.state">CO | Colorado</option>
-    <option value="Connecticut" data-ng-model="listingsNewVm.listing.state">CT | Connecticut</option>
-    <option value="Deleware" data-ng-model="listingsNewVm.listing.state">DE | Deleware</option>
-    <option value="District of Columbia" data-ng-model="listingsNewVm.listing.state">DC | District of Columbia</option>
-    <option value="Florida" data-ng-model="listingsNewVm.listing.state">FL | Florida</option>
-    <option value="Georgia" data-ng-model="listingsNewVm.listing.state">GA | Georgia</option>
-    <option value="Hawaii" data-ng-model="listingsNewVm.listing.state">HI | Hawaii</option>
-    <option value="Idaho" data-ng-model="listingsNewVm.listing.state">ID | Idaho</option>
-    <option value="Illinois" data-ng-model="listingsNewVm.listing.state">IL | Illinois</option>
-    <option value="Indiana" data-ng-model="listingsNewVm.listing.state">IN | Indiana</option>
-    <option value="Iowa" data-ng-model="listingsNewVm.listing.state">IA | Iowa</option>
-    <option value="Kansas" data-ng-model="listingsNewVm.listing.state">KS | Kansas</option>
-    <option value="Kentucky" data-ng-model="listingsNewVm.listing.state">KY | Kentucky</option>
-    <option value="Louisiana" data-ng-model="listingsNewVm.listing.state">LA | Louisiana</option>
-    <option value="Maine" data-ng-model="listingsNewVm.listing.state">ME | Maine</option>
-    <option value="Maryland" data-ng-model="listingsNewVm.listing.state">MD | Maryland</option>
-    <option value="Massachusetts" data-ng-model="listingsNewVm.listing.state">MA | Massachusetts</option>
-    <option value="Michigan" data-ng-model="listingsNewVm.listing.state">MI | Michigan</option>
-    <option value="Minnesota" data-ng-model="listingsNewVm.listing.state">MN | Minnesota</option>
-    <option value="Mississippi" data-ng-model="listingsNewVm.listing.state">MS | Mississippi</option>
-    <option value="Missouri" data-ng-model="listingsNewVm.listing.state">MO | Missouri</option>
-    <option value="Montana" data-ng-model="listingsNewVm.listing.state">MT | Montana</option>
-    <option value="Nebraska" data-ng-model="listingsNewVm.listing.state">NE | Nebraska</option>
-    <option value="Nevada" data-ng-model="listingsNewVm.listing.state">NV | Nevada</option>
-    <option value="New Hampshire" data-ng-model="listingsNewVm.listing.state">NH | New Hampshire</option>
-    <option value="New Jersey" data-ng-model="listingsNewVm.listing.state">NJ | New Jersey</option>
-    <option value="New Mexico" data-ng-model="listingsNewVm.listing.state">NM | New Mexico</option>
-    <option value="New York" data-ng-model="listingsNewVm.listing.state">NY | New York</option>
-    <option value="North Carolina" data-ng-model="listingsNewVm.listing.state">NC | North Carolina</option>
-    <option value="North Dakota" data-ng-model="listingsNewVm.listing.state">ND | North Dakota</option>
-    <option value="Ohio" data-ng-model="listingsNewVm.listing.state">OH | Ohio</option>
-    <option value="Oklahoma" data-ng-model="listingsNewVm.listing.state">OK | Oklahoma</option>
-    <option value="Oregon" data-ng-model="listingsNewVm.listing.state">OR | Oregon</option>
-    <option value="Pennsylvania" data-ng-model="listingsNewVm.listing.state">PA | Pennsylvania</option>
-    <option value="Rhode Island" data-ng-model="listingsNewVm.listing.state">RI | Rhode Island</option>
-    <option value="South Carolina" data-ng-model="listingsNewVm.listing.state">SC | South Carolina</option>
-    <option value="South Dakota" data-ng-model="listingsNewVm.listing.state">SD | South Dakota</option>
-    <option value="Tennessee" data-ng-model="listingsNewVm.listing.state">TN | Tennessee</option>
-    <option value="Texas" data-ng-model="listingsNewVm.listing.state">TX | Texas</option>
-    <option value="Utah" data-ng-model="listingsNewVm.listing.state">UT | Utah</option>
-    <option value="Vermont" data-ng-model="listingsNewVm.listing.state">VT | Vermont</option>
-    <option value="Virginia" data-ng-model="listingsNewVm.listing.state">VA | Virginia</option>
-    <option value="Washington" data-ng-model="listingsNewVm.listing.state">WA | Washington</option>
-    <option value="West Virginia" data-ng-model="listingsNewVm.listing.state">WV | West Virginia</option>
-    <option value="Wisconsin" data-ng-model="listingsNewVm.listing.state">WI | Wisconsin</option>
-    <option value="Wyoming" data-ng-model="listingsNewVm.listing.state">WY | Wyoming</option>
-  </select>
-</p>
+<div class="row form">
+  <div class="column">
+    <form data-ng-submit="listingsNewVm.create()">
+    <label class="control-label" for="date">Date:</label>
+    <input type="date" name="input" data-ng-model="listingsNewVm.listing.date"
+         placeholder="yyyy-MM-dd" min="2016-01-01" max="2020-12-31" required />
+    <p>From <input type="time" placeholder="Start Time" data-ng-model="listingsNewVm.listing.time_start" /> - <input type="time" placeholder="End Time" data-ng-model="listingsNewVm.listing.time_end" /></p>
+    <p>Sponsored by: <input placeholder="Sponsors" data-ng-model="listingsNewVm.listing.sponsors" /></p>
+    <p>Incentive: <input placeholder="Incentive" data-ng-model="listingsNewVm.listing.incentive" /></p>
+    <p>Food Offered:
+      <input type="radio" value="true" data-ng-model="listingsNewVm.listing.food_offered">Yes
+      <input type="radio" value="false" data-ng-model="listingsNewVm.listing.food_offered" />No
+    </p>
+    <p><textarea placeholder="Description of food (if applicable)" data-ng-model="listingsNewVm.listing.food_description"> </textarea></p>
+    <p>Location:</p>
+    <p><input placeholder="Street Address" data-ng-model="listingsNewVm.listing.address" /></p>
+    <p><input placeholder="City" data-ng-model="listingsNewVm.listing.city" /></p>
+    <p><input placeholder="County" data-ng-model="listingsNewVm.listing.county" /></p>
+    <p>
+      <select name="State">
+        <option selected>Select State</option>
+        <option value="Alabama" data-ng-model="listingsNewVm.listing.state">AL | Alabama</option>
+        <option value="Alaska" data-ng-model="listingsNewVm.listing.state">AK | Alaska</option>
+        <option value="Arizona" data-ng-model="listingsNewVm.listing.state">AZ | Arizona</option>
+        <option value="California" data-ng-model="listingsNewVm.listing.state">CA | California</option>
+        <option value="Colorado" data-ng-model="listingsNewVm.listing.state">CO | Colorado</option>
+        <option value="Connecticut" data-ng-model="listingsNewVm.listing.state">CT | Connecticut</option>
+        <option value="Deleware" data-ng-model="listingsNewVm.listing.state">DE | Deleware</option>
+        <option value="District of Columbia" data-ng-model="listingsNewVm.listing.state">DC | District of Columbia</option>
+        <option value="Florida" data-ng-model="listingsNewVm.listing.state">FL | Florida</option>
+        <option value="Georgia" data-ng-model="listingsNewVm.listing.state">GA | Georgia</option>
+        <option value="Hawaii" data-ng-model="listingsNewVm.listing.state">HI | Hawaii</option>
+        <option value="Idaho" data-ng-model="listingsNewVm.listing.state">ID | Idaho</option>
+        <option value="Illinois" data-ng-model="listingsNewVm.listing.state">IL | Illinois</option>
+        <option value="Indiana" data-ng-model="listingsNewVm.listing.state">IN | Indiana</option>
+        <option value="Iowa" data-ng-model="listingsNewVm.listing.state">IA | Iowa</option>
+        <option value="Kansas" data-ng-model="listingsNewVm.listing.state">KS | Kansas</option>
+        <option value="Kentucky" data-ng-model="listingsNewVm.listing.state">KY | Kentucky</option>
+        <option value="Louisiana" data-ng-model="listingsNewVm.listing.state">LA | Louisiana</option>
+        <option value="Maine" data-ng-model="listingsNewVm.listing.state">ME | Maine</option>
+        <option value="Maryland" data-ng-model="listingsNewVm.listing.state">MD | Maryland</option>
+        <option value="Massachusetts" data-ng-model="listingsNewVm.listing.state">MA | Massachusetts</option>
+        <option value="Michigan" data-ng-model="listingsNewVm.listing.state">MI | Michigan</option>
+        <option value="Minnesota" data-ng-model="listingsNewVm.listing.state">MN | Minnesota</option>
+        <option value="Mississippi" data-ng-model="listingsNewVm.listing.state">MS | Mississippi</option>
+        <option value="Missouri" data-ng-model="listingsNewVm.listing.state">MO | Missouri</option>
+        <option value="Montana" data-ng-model="listingsNewVm.listing.state">MT | Montana</option>
+        <option value="Nebraska" data-ng-model="listingsNewVm.listing.state">NE | Nebraska</option>
+        <option value="Nevada" data-ng-model="listingsNewVm.listing.state">NV | Nevada</option>
+        <option value="New Hampshire" data-ng-model="listingsNewVm.listing.state">NH | New Hampshire</option>
+        <option value="New Jersey" data-ng-model="listingsNewVm.listing.state">NJ | New Jersey</option>
+        <option value="New Mexico" data-ng-model="listingsNewVm.listing.state">NM | New Mexico</option>
+        <option value="New York" data-ng-model="listingsNewVm.listing.state">NY | New York</option>
+        <option value="North Carolina" data-ng-model="listingsNewVm.listing.state">NC | North Carolina</option>
+        <option value="North Dakota" data-ng-model="listingsNewVm.listing.state">ND | North Dakota</option>
+        <option value="Ohio" data-ng-model="listingsNewVm.listing.state">OH | Ohio</option>
+        <option value="Oklahoma" data-ng-model="listingsNewVm.listing.state">OK | Oklahoma</option>
+        <option value="Oregon" data-ng-model="listingsNewVm.listing.state">OR | Oregon</option>
+        <option value="Pennsylvania" data-ng-model="listingsNewVm.listing.state">PA | Pennsylvania</option>
+        <option value="Rhode Island" data-ng-model="listingsNewVm.listing.state">RI | Rhode Island</option>
+        <option value="South Carolina" data-ng-model="listingsNewVm.listing.state">SC | South Carolina</option>
+        <option value="South Dakota" data-ng-model="listingsNewVm.listing.state">SD | South Dakota</option>
+        <option value="Tennessee" data-ng-model="listingsNewVm.listing.state">TN | Tennessee</option>
+        <option value="Texas" data-ng-model="listingsNewVm.listing.state">TX | Texas</option>
+        <option value="Utah" data-ng-model="listingsNewVm.listing.state">UT | Utah</option>
+        <option value="Vermont" data-ng-model="listingsNewVm.listing.state">VT | Vermont</option>
+        <option value="Virginia" data-ng-model="listingsNewVm.listing.state">VA | Virginia</option>
+        <option value="Washington" data-ng-model="listingsNewVm.listing.state">WA | Washington</option>
+        <option value="West Virginia" data-ng-model="listingsNewVm.listing.state">WV | West Virginia</option>
+        <option value="Wisconsin" data-ng-model="listingsNewVm.listing.state">WI | Wisconsin</option>
+        <option value="Wyoming" data-ng-model="listingsNewVm.listing.state">WY | Wyoming</option>
+      </select>
+    </p>
 
-<p><input placeholder="Zip Code" data-ng-model="listingsNewVm.listing.zipcode" /></p>
-<p><input placeholder="County" data-ng-model="listingsNewVm.listing.county" /></p>
-<p><input placeholder="Price" data-ng-model="listingsNewVm.listing.list_price" /></p>
+    <p><input placeholder="Zip Code" data-ng-model="listingsNewVm.listing.zipcode" /></p>
+  </div>
+  <div class="column">
+    Property Status:
+      <select name="Property Status">
+        <option selected></option>
+        <option value="Active" data-ng-model="listingsNewVm.listing.property_status">Active</option>
+        <option value="Coming Soon" data-ng-model="listingsNewVm.listing.property_status">Coming Soon</option>
+      </select>
+    </p>
+    <p>Preview: <input placeholder="Image URL" data-ng-model="listingsNewVm.listing.property_image"></p>
+    <p>List Price: <input placeholder="Price" data-ng-model="listingsNewVm.listing.list_price" /></p>
 
-<p>
-  <select name="Property Status">
-    <option selected>Property Status</option>
-    <option value="Active" data-ng-model="listingsNewVm.listing.property_status">Active</option>
-    <option value="Coming Soon" data-ng-model="listingsNewVm.listing.property_status">Coming Soon</option>
-  </select>
-</p>
+    <p>Description: <input placeholder="Property Description" data-ng-model="listingsNewVm.listing.property_description" /></p>
+    <p>MLS Number: <input placeholder="MLS Number" data-ng-model="listingsNewVm.listing.mls_num" /></p>
 
-<p>
-  <select name="Property Type">
-    <option selected>Property Type</option>
-    <option value="Single-Family Home" data-ng-model="listingsNewVm.listing.property_type">Single-Family Home</option>
-    <option value="Condominium" data-ng-model="listingsNewVm.listing.property_type">Condominium</option>
-    <option value="Townhouse" data-ng-model="listingsNewVm.listing.property_type">Townhouse</option>
-    <option value="Duplex" data-ng-model="listingsNewVm.listing.property_type">Duplex</option>
-    <option value="Farm" data-ng-model="listingsNewVm.listing.property_type">Farm</option>
-    <option value="Other" data-ng-model="listingsNewVm.listing.property_type">Other</option>
-  </select>
-</p>
-<p><input placeholder="MLS Number" data-ng-model="listingsNewVm.listing.mls_num" /></p>
-<p><input type="number" placeholder="Number of Bedrooms" data-ng-model="listingsNewVm.listing.bedrooms_num" min="0"/></p>
-<p><input type="number" placeholder="Number of Full Bathrooms" data-ng-model="listingsNewVm.listing.full_baths" min="0"/></p>
-<p><input type="number" placeholder="Number of Half Bathrooms" data-ng-model="listingsNewVm.listing.half_baths" min="0"/></p>
-<p><input placeholder="Sponsors" data-ng-model="listingsNewVm.listing.sponsors" /></p>
-<p><input placeholder="Property Description" data-ng-model="listingsNewVm.listing.property_description" /></p>
-<p>Food Offered:
-  <input type="radio" value="true" data-ng-model="listingsNewVm.listing.food_offered">Yes
-  <input type="radio" value="false" data-ng-model="listingsNewVm.listing.food_offered" />No
-</p>
-<p><textarea placeholder="Description of food (if applicable)" data-ng-model="listingsNewVm.listing.food_description"> </textarea></p>
-<p><input placeholder="Incentive" data-ng-model="listingsNewVm.listing.incentive" /></p>
-<p><input placeholder="Image URL" data-ng-model="listingsNewVm.listing.property_image"></p>
-<input type="submit" value="Add Listing" />
-</form>
+    <p>
+      Property Type: <select name="Property Type">
+        <option selected></option>
+        <option value="Single-Family Home" data-ng-model="listingsNewVm.listing.property_type">Single-Family Home</option>
+        <option value="Condominium" data-ng-model="listingsNewVm.listing.property_type">Condominium</option>
+        <option value="Townhouse" data-ng-model="listingsNewVm.listing.property_type">Townhouse</option>
+        <option value="Duplex" data-ng-model="listingsNewVm.listing.property_type">Duplex</option>
+        <option value="Farm" data-ng-model="listingsNewVm.listing.property_type">Farm</option>
+        <option value="Other" data-ng-model="listingsNewVm.listing.property_type">Other</option>
+      </select>
+    </p>
+    <p>Bedrooms: <input type="number" placeholder="#" data-ng-model="listingsNewVm.listing.bedrooms_num" min="0"/></p>
+    <p>Full Bathrooms: <input type="number" placeholder="#" data-ng-model="listingsNewVm.listing.full_baths" min="0"/></p>
+    <p>Half Bathrooms: <input type="number" placeholder="#" data-ng-model="listingsNewVm.listing.half_baths" min="0"/></p>
+    <input type="submit" value="Add Listing" />
+  </div>
+
+  </form>
+</div>

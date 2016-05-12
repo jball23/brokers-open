@@ -11,19 +11,19 @@
     "$stateProvider",
     RouterFunction
   ])
-
+  .filter('boolText', boolText)
 
   function RouterFunction($stateProvider){
-  $stateProvider
+    $stateProvider
     .state("Index",{
       url: "/",
       templateUrl:"js/templates/_index.html"
     })
     .state("listingsIndex", {
-    url: "/listings",
-    templateUrl: "js/listings/templates/_index.html",
-    controller: "listingsIndexController",
-    controllerAs: "listingsIndexVm"
+      url: "/listings",
+      templateUrl: "js/listings/templates/_index.html",
+      controller: "listingsIndexController",
+      controllerAs: "listingsIndexVm"
     })
     .state("listingsNew",{
       url: "/listings/new",
@@ -68,4 +68,14 @@
       controllerAs:"usersEditVm"
     })
   };
+
+  function boolText() {
+    return function(boolValue) {
+      if (boolValue === true)
+      return "Yes";
+      else {
+        return "No"
+      }
+    }
+  }
 })();
