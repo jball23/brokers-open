@@ -9,7 +9,7 @@
   ])
 
   function FactoryFunction($resource){
-    return $resource("http://localhost:3000/users/:id", {}, {
+    return $resource("https://brokers-open.herokuapp.com/users/:id", {}, {
       update: {method: "PUT"}
     })
   }
