@@ -8,7 +8,9 @@
     var vm = this
     vm.user = new UserFactory();
     vm.create = function($state){
-      vm.user.$save()
+      vm.user.$save().then(function(){
+        $state.go('usersIndex')
+      });
     }
   }
 })();
