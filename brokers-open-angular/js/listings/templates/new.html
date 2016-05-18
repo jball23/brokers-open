@@ -1,6 +1,5 @@
 <div class="row form">
   <div class="column">
-    <form data-ng-submit="listingsNewVm.create()">
     <label class="control-label" for="date">Date:</label>
     <input type="date" name="input" data-ng-model="listingsNewVm.listing.date"
          placeholder="yyyy-MM-dd" min="2016-01-01" max="2020-12-31" required />
@@ -19,6 +18,7 @@
     <p>
       <select name="State">
         <option selected>Select State</option>
+        <!-- I'd recommend creating a JSON file or Angular factory will all the states inside it. Then you can simply `ng-repeat` through that. -->
         <option value="Alabama" data-ng-model="listingsNewVm.listing.state">AL | Alabama</option>
         <option value="Alaska" data-ng-model="listingsNewVm.listing.state">AK | Alaska</option>
         <option value="Arizona" data-ng-model="listingsNewVm.listing.state">AZ | Arizona</option>
@@ -88,6 +88,15 @@
     <p>Description: <input placeholder="Property Description" data-ng-model="listingsNewVm.listing.property_description" /></p>
     <p>MLS Number: <input placeholder="MLS Number" data-ng-model="listingsNewVm.listing.mls_num" /></p>
 
+    <!-- It would have been nice if the agents were in here. It seems new listings aren't associated with an agent. You could do this with something like:
+    
+// In your controller
+vm.agents = Agent.query();
+
+// In your HTML
+<option data-ng-repeat="agent in listingsNewVM.agents">
+   -->
+
     <p>
       Property Type: <select name="Property Type">
         <option selected></option>
@@ -102,8 +111,8 @@
     <p>Bedrooms: <input type="number" placeholder="#" data-ng-model="listingsNewVm.listing.bedrooms_num" min="0"/></p>
     <p>Full Bathrooms: <input type="number" placeholder="#" data-ng-model="listingsNewVm.listing.full_baths" min="0"/></p>
     <p>Half Bathrooms: <input type="number" placeholder="#" data-ng-model="listingsNewVm.listing.half_baths" min="0"/></p>
-    <input type="submit" value="Add Listing" />
+    <button data-ng-click="listingsNewVm.create()">Add Listing</button>
   </div>
 
-  </form>
+
 </div>
