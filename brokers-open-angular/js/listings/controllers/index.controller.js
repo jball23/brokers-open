@@ -40,11 +40,12 @@
     this.sort_data_by = function(name){
      this.sort_on = name;
      this.is_descending = !(this.is_descending);
+     // Watch your indentation!
    }
 
     this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
 
-
+    // If you were to keep going with this, I'd encourage you to extract all this Google Maps stuff out into its own factory. Getting pretty crowded in here.
 
     var initialLocation;
     var siberia = new google.maps.LatLng(60, 105);
