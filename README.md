@@ -1,6 +1,6 @@
 # brokers-open
 
--Front end built with Angular.js
--Back end API built with Ruby on Rails using a mySQL
--Google maps API in Angular.js 
+<p>-Front end built with Angular.js</p>
+<p>-Back end API built with Ruby on Rails using mySQL database</p>
+<p>-Google maps API in Angular.js</p>
 
