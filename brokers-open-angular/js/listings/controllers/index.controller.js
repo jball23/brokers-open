@@ -14,7 +14,7 @@
         addresses.push(listing.address + " " + listing.city + " " + listing.state + " " + listing.zipcode)
       })
 
-      var baseUrl = 'http://maps.googleapis.com/maps/api/geocode/json?address='
+      var baseUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address='
       addresses.forEach(function(address){
         $http({
           method: 'GET',
